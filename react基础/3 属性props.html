@@ -1,0 +1,52 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    <style>
+        .ez-lamp{
+            display : inline-block;
+            margin : 5px;
+            width : 30px;
+            height : 30px;
+            border-radius : 50%;
+        }
+        .ez-lamp.on{
+            opacity : 1;
+            background : -webkit-radial-gradient(30% 30%,white 5%,red 95%);
+        }
+        .ez-lamp.off{
+            opacity : 0.5;
+            background : -webkit-radial-gradient(30% 30%,#888 5%,red 95%);
+        }
+    </style>
+</head>
+<body>
+<div id="content"></div>
+
+</body>
+</html>
+<script type="text/jsx">
+    //定义React组件
+    var EzLampComp = React.createClass({
+        render:function(){
+            //获取到属性值
+            var onoff = this.props.onoff;
+            //返回react元素
+            if(onoff == 'on'){
+                return <span className = 'ez-lamp on'></span>
+            }else{
+                return <span className = 'ez-lamp off'></span>
+            }
+        }
+    })
+    //渲染react元素
+    ReactDOM.render(
+    <EzLampComp onoff="on"/> , //<--JSX
+            document.querySelector("#content"));
+</script>
+<!--总结：也就是说，组件可以写成JSX形式的,方便多个DOM的创建，但是最终返回的依然只能是一个-->
+<!--组件中可以-->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LED Display</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <!--组件样式-->
+    <style>
+        .ez-led{
+            font-family : "Microsoft YaHei";
+            font-size : 40px;
+            background : #70d355;
+            width: 300px;
+            height:120px;
+            line-height : 60px;
+            text-align : center;
+            letter-spacing:5px;
+        }
+    </style>
+</head>
+<body>
+<!--定义容器-->
+<div id="content"></div>
+<script>
+    //定义React组件
+    var EzLedComp = React.createClass({
+        //每个React组件都应该事先render()方法
+        render : function(){
+            var e = React.createElement(
+                    "div",
+                    {className : "ez-led"},
+                    "Hello, React!"
+            );
+            //render()方法应该返回一个React元素
+            return e;
+        }
+    });
+    //创建React元素
+    var el = React.createElement(EzLedComp);
+    //渲染
+    ReactDOM.render(el,document.querySelector("#content"));
+</script>
+</body>
+</html>

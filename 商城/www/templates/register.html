@@ -1,0 +1,31 @@
+<div id="register" class="graybg">
+    <div id="login">
+        <div class="header cheader text-left">
+            <a href="javascript:history.back(-1)" class="back"></a>用户注册
+        </div>
+        <ion-content>
+            <div class="login_panel">
+                <div class="login_logo">
+                    <img src="img/loginLogo.png" alt="login" />
+                </div>
+                <form  name="rForm" ng-submit="register()">
+                    <input type="text" name="username" ng-model="formData.name" placeholder="用户名" required/>
+                    <span class="tip" ng-show="rForm.username.$dirty && rForm.username.$invalid">
+                <span ng-show="rForm.username.$error.required">用户名必须</span>
+                    </span>
+                    <input type="password" name="password" ng-model="formData.password" placeholder="密码" required/>
+                    <span class="tip" ng-show="rForm.password.$dirty && rForm.password.$invalid">
+                <span ng-show="rForm.password.$error.required">密码必须</span>
+                    </span>
+                    <input type="email" name="email" ng-model="formData.email" placeholder="电子邮箱" />
+                    <input type="tel" name="tel" ng-model="formData.tel" placeholder="手机" />
+                    <input type="submit" value="注册" ng-disabled="rForm.username.$dirty&&rForm.username.$invalid ||
+            rForm.password.$dirty&&rForm.password.$invalid" />
+
+                </form>
+                <p>已有会员?<span class="" ui-sref='tab.setting.login'>直接登录</span></p>  
+            </div>
+        </ion-content>
+
+    </div>
+</div>

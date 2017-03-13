@@ -1,0 +1,789 @@
+/* Empty. Add your own CSS if you like */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100%;*/
+    font-size: 12px;
+    font-family: '微软雅黑';
+}
+
+.view-container {
+    min-width: 300px !important;
+    max-width: 667px !important;
+    margin: 0 auto !important;
+}
+
+.scroll-content {
+    top: 70px;
+    font-size: 12px !important;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+.clear {
+    clear: both;
+}
+
+.tab-nav.tabs .icon::before {
+    content: '';
+    background: url("../img/tabIcon.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: auto 100%;
+    display: inline-block;
+}
+
+.tab-nav.tabs .icon.home::before {
+    background-position: 0px 0px;
+}
+
+.tab-nav.tabs .icon.like::before {
+    background-position: -35px 0px;
+}
+
+.tab-nav.tabs .icon.contact::before {
+    background-position: -65px 0px;
+}
+
+.tab-nav.tabs .icon.cart::before {
+    background-position: -94px 0px;
+}
+
+.tab-nav.tabs .icon.setting::before {
+    background-position: -123px 0px;
+}
+
+.tab-item-active {
+    color: #009ca3 !important;
+}
+
+.row {
+    margin: 0 -15px;
+    padding: 0;
+}
+#index .scroll-content {
+    top: 60px;
+}
+
+
+#index .banner {
+    height: 62px;
+    background-color: #009ca3;
+    margin: 0 -15px;
+}
+
+#index .col-top {
+    top: 10px;
+}
+
+#index .banner > .col-xs-6 {
+    padding: 0;
+}
+
+#index .banner-icon {
+    margin: 0 -15px;
+}
+
+#index .banner form {
+    margin-top: 4px;
+}
+
+#index .glycolor {
+    color: #c5e3e1;
+}
+
+#index .col-form-search {
+    background-color: #00858a;
+    border: 1px solid #00858a;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#index .banner .col-form-input {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #00858a;
+    padding: 5px 10px;
+    color: white;
+
+}
+
+#index .slide {
+    width: 100%;
+}
+
+#index .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+#index .swiper-slide {
+    text-align: center;
+    font-size: inherit;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#index .nav {
+    margin: 10px 0 5px 0;
+}
+
+#index .nav .nav-item {
+    width: 20%;
+    float: left;
+}
+
+#index .nav a {
+    color: #1c1a1b;
+}
+
+#index .nav .nav-item li {
+    text-align: center;
+}
+
+#index .divider {
+    margin-bottom: 15px;
+}
+
+#index .divider .col-xs-4 {
+    padding: 0;
+}
+
+#index .divider hr {
+    border-top: 1px solid #08a0ab;
+    margin: 10px 0px;
+}
+
+#index .divider .d-title > div {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #08a0ab;
+}
+
+#index .divider .d-title > div > img {
+    margin-right: 5px;
+}
+
+ .flash-main .flash-img {
+    display: block;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+ .flash-main h3 {
+    font-size: 14px;
+}
+
+ .flash-main .price {
+    font-size: 20px;
+    color: red;
+}
+
+ .flash-main .price s {
+    font-size: 10px;
+    margin: 1px 2px;
+    color: #333;
+}
+ .flash-main .price a {
+    float: right;
+    margin-top: 5px;
+}
+
+ .flash-main .price a img {
+    height: 20px;
+}
+
+ .flash-main .count-down {
+    margin-bottom: 25px;
+}
+
+ .flash-main .count-down span {
+    font-size: 13px;
+    background-color: #5e5d5b;
+    color: #fff;
+}
+
+ .flash-main .count-down span.overplus {
+    float: right;
+    background-color: #fff;
+    color: #000000;
+
+}
+
+ .flash-main .count-down span.overplus b {
+    color: red;
+}
+
+#index .category .header {
+    background-color: #e5f5f5;
+    padding: 5px 10px;
+}
+
+#index .category .header .col-xs-6, .header .col-xs-4, .header .col-xs-3 {
+    padding: 0;
+}
+
+#index .category .header .c-logo img {
+    height: 35px;
+    margin: 5px 0;
+}
+
+#index .category .header .c-title, .more {
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+}
+
+#index .category .main .col-xs-4 {
+    padding: 0;
+}
+
+#index .category .main figure {
+    padding: 5px;
+}
+
+#index .category .main .name {
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+#index .category .main .price {
+    color: red;
+}
+
+/*除首页外，几个页面公用的样式*/
+.graybg {
+    background-color: #d9d9d9;
+    height: 100%;
+}
+
+.cheader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #0799a5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    height: 45px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 40px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.cheader a {
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: url("../img/headLogo.png");
+    background-size: 330px 35px;
+}
+
+/*login页面的样式*/
+
+#login {
+    background-color: #d9d9d9;
+    height:100%;
+}
+#like .header a.back,#login .header a.back {
+    background-position: -285px 0;
+}
+
+#login .login_panel {
+    margin: 0 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px;
+    overflow: hidden;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+#login .login_panel .login_logo {
+    margin: 30px 0;
+    text-align: center;
+
+}
+
+#login .login_panel form {
+    padding: 10px 0;
+}
+
+#login .login_panel form input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#login .login_panel form input[type=submit] {
+    padding: 0;
+    background-color: #5fbfc5;
+    line-height: 52px;
+
+    color: #fff;
+    border: 1px solid #5fbfc5;
+}
+
+#login .login_panel form .tip {
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    color: red;
+}
+
+#login .login_panel p {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+#login .login_panel p span {
+    text-decoration: underline;
+    color: #ff0090;
+}
+
+#login .login_panel p .forget {
+    margin-right: 10px;
+    color: #5fbfc5;
+}
+
+/*cart.html的样式*/
+
+#cart .cheader a.house {
+    background-position: -148px 0;
+}
+#cart p {
+    text-align: center;
+    font-size: 20px;
+    color:#aaa;
+    margin-bottom: 30px;
+}
+#cart .shopping {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+#register #login .scroll-content {
+    top: 70px;
+}
+#register #login .login_logo {
+    margin-bottom: 20px;
+}
+#register #login input {
+    margin-bottom: 10px;
+}
+#setting {
+    background-color: #e6f4f5;
+    height: 100%;
+}
+#setting a {
+    color: #000000;
+}
+#setting .header {
+ background-color: #009ca3;
+    height: 64px;
+    line-height: 64px;
+    padding-left: 60px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+#setting .header .user{
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    background: url("../img/headLogo.png");
+    background-size: 330px 35px;
+    background-position: -45px 0;
+}
+#setting .header .sign_out {
+    float: right;
+    margin-right: 20px;
+    color: #756868;
+}
+#setting .whitebg {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+#setting .order {
+    padding: 10px 0;
+
+}
+#setting .title {
+    overflow: hidden;
+}
+#setting .title>div {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+#setting .main {
+    overflow: hidden;
+}
+#setting .main>div {
+    width: 20%;
+    float: left;
+}
+#setting .main img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+#setting .buyer {
+    background-color: #fff;
+}
+#setting .buyer .title {
+    border-bottom: 1px solid #94babd ;
+}
+#setting .buyer .main>div {
+    width: 25%;
+    padding: 10px 5px;
+    border: 1px solid #f1f5f8;
+}
+#setting .trade>div {
+
+    border: 1px solid #e6f4f5;
+    overflow: hidden;
+    
+}
+#setting .trade .t_list {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px 0 40px;
+    position: relative;
+}
+#setting .trade .t_list span {
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 10px;
+}
+
+#contact {
+    background-color: rgb(235, 235, 237);
+}
+
+#contact .header a.back{
+    background-position: -285px 0;
+}
+#contact .main {
+    padding: 0 20px 0;
+}
+#contact .main p {
+    font-size: 14px;
+    text-align: left;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+#contact .main form input,textarea{
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid rgb(204, 204, 204);
+    margin-bottom: 10px;
+}
+#contact .main form textarea {
+padding: 10px;
+}
+#contact .main form input[type=submit] {
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(50, 168, 245);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;    
+}
+.index .header{
+    height: 45px;
+    line-height: 45px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    font-size: 18px;
+    color: #0799a5;
+}
+.index .header a {
+    float: left;  
+}
+.index .header a.like {
+    float: right;
+}
+.index .header a img {
+    height: 30px;
+    margin: 7px 5px;
+}
+.index .scroll-content {
+    top: 45px;
+}
+#category .middle {
+    padding: 20px 20px;
+    overflow: hidden;
+}
+#category .middle .logo img {
+    height: 34px;
+}
+#category .form-control {
+    border: 1px solid #ccc !important;
+    padding: 5px 10px !important;
+}
+#category .middle form .btn {
+    background-color: #009ca3;
+    color: #333;
+}
+#category main section {
+    overflow: hidden;
+}
+#category main section .col-xs-4 a{
+display: inline-block;
+padding: 10px 0;
+width: 100%;
+text-align: center;
+color: #546280;
+font-size: 14px;
+}
+#flashsale .flash-main section {
+    padding: 10px;
+}
+#p_detail .top_bar{
+    height: 55px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#p_detail .top_bar .t_menu {
+    font-size: 30px;
+    color: #0799a5;
+    text-align: center;
+    width: 10%;
+    float: left;
+    margin-top: -5px;
+}
+#p_detail .top_bar .t_search {
+    width: 90%;
+    float: right
+}
+#p_detail .top_bar .t_search .input-group {
+    width: 100%;
+}
+#p_detail .scroll-content {
+    top: 55px;
+}
+ #p_detail .form-control {
+    border: 1px solid #ccc !important;
+    padding: 5px 10px !important;
+}
+#p_detail .detail_img {
+    background: #e7f1f1;
+    text-align: center;
+}
+#p_detail .detail_img img {
+    width: 205px;
+}
+#p_detail main.detail_cnt {
+    font-size: 14px;
+}
+#p_detail main .detail_config {
+    padding: 10px;
+
+}
+#p_detail main .detail_config p{
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    
+}
+#p_detail main .detail_config .price {
+    font-weight: bold;
+    color: #b20005;
+}
+#p_detail main .detail_buy {
+    background: #ddd;
+    padding: 4px 2px;
+}
+#p_detail main .detail_buy>div {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+#p_detail main .detail_buy span {
+    padding: 5px 15px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+}
+#p_detail main .detail_buy .brand {
+    border:1px solid #8d0303;
+    border-radius: 3px;
+    color: #000;
+}
+#p_detail main .detail_buy .model {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    background: #fefefe;
+    background: linear-gradient(to bottom,#fefefe,#f5f5f5);
+    background: -moz-linear-gradient(top, #fefefe,#f5f5f5);
+   background: -webkit-linear-gradient(top,#fefefe,#f5f5f5);
+}
+#p_detail main .detail_buy .color.on {
+ background: #b20005;
+ color: white;
+ border: 1px solid white;
+ border-radius: 5px;
+}
+#p_detail main .detail_buy .num {
+    padding: 5px;
+}
+#p_detail main .detail_buy .buy_num {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    display: inline-block;    
+}
+
+#p_detail main .detail_buy .d_selected {
+    height: 30px;
+    line-height: 30px;
+}
+#p_detail main .detail_buy .selected {
+    color: #b20005;
+    font-weight: bold;
+    top: 0px;
+    padding: 0;
+}
+#p_detail main .detail_buy .buy_2 {
+    border: 1px solid #ddd;
+    padding: 10px 0;
+}
+#p_detail main .detail_buy ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#p_detail main .detail_buy .buy_2 a {
+ display: inline-block;
+ width: 45%;
+ padding: 10px;
+ text-align: center;
+ margin: 0 2%;
+ border-radius: 5px;
+ color: #fff;
+   
+}
+#p_detail main .detail_buy .buy_2 .buy_now {
+    background: #5fbfc5;
+}
+#p_detail main .detail_buy .buy_2 .add_cart {
+    background: #b10000
+}
+#p_detail main .detail_show {
+    background: #fff;
+    overflow: hidden;
+}
+#p_detail main .detail_show .show_title {
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    cursor:pointer;
+    margin: 0;
+    padding: 0
+}
+
+#p_detail main .detail_show .show_title li {
+background: #f3f3f3;
+border-top: 3px solid #f3f3f3;
+float: left;
+width: 50%;
+text-align: center;
+padding: 10px 0;
+}
+#p_detail main .detail_show .show_title li.on {
+    border-top: 3px solid #ff0090;
+    background: #fff;
+}  
+#p_detail main .detail_show .show_cnt section {
+    padding: 10px;
+}
+#p_detail main .detail_show .show_cnt section.comment{
+    padding: 10px;
+    display: none;
+    min-height: 100px;
+}
+/*#p_detail main .detail_show .show_cnt section.active {
+    display: block;
+}*/
+#like .scroll-content {
+    top: 45px;
+}
+#like .like_title {
+    padding: 10px 5px;
+    font-size: 14px;
+    overflow: hidden;
+    background: #fff;
+}
+#like .like_title li {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #828282;
+    font-weight: thin;
+    
+}
+#like .like_title li.on {
+    background: #5fbfc5;
+}
+#like .like_main {
+    background: #fff;
+}
+#like .like_main section {
+    padding: 10px;
+
+}
+#like .like_main section div {
+   padding: 10px;
+   background: #fff;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+.off {
+    display: none;
+}

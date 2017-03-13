@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    <!--组件样式-->
+    <style>
+        .ez-led{
+            font-family : "Microsoft YaHei";
+            font-size : 40px;
+            background : #70d355;
+            width: 300px;
+            height:120px;
+            line-height : 60px;
+            text-align : center;
+            letter-spacing:5px;
+        }
+    </style>
+</head>
+<body>
+<!--定义容器-->
+<div id="content"></div>
+<script type="text/jsx">
+
+    //定义React组件
+    var EzLedComp = React.createClass({
+        //每个React组件都应该事先render()方法
+        render : function(){
+            var e =
+
+                //JSX-->
+                    <div>
+                        <div className="ez-led">Hello, React!</div>
+                        <div className="ez-led">2015-04-15</div>
+                    </div>;
+            //<--JSX
+
+            return e;
+        }
+    });
+    //渲染
+    ReactDOM.render(
+            <EzLedComp/> , //JSX
+            document.querySelector("#content"));
+
+</script>
+
+</body>
+</html>

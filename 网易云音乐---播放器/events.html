@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>网易云音乐</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />  
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info nav-xs">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="icon-earphones"></i>
+          <img src="images/logo.png" alt="." class="hide">
+          <span class="hidden-nav-xs m-l-sm">网易云音乐</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>      <ul class="nav navbar-nav hidden-xs">
+        <li>
+          <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+            <i class="fa fa-indent text"></i>
+            <i class="fa fa-dedent text-active"></i>
+          </a>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+            </span>
+            <input type="text" class="form-control input-sm no-border rounded" placeholder="搜索音乐、歌曲 . . .">
+          </div>
+        </div>
+      </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger count">2</span>
+            </a>
+            <section class="dropdown-menu aside-xl animated fadeInUp">
+              <section class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>有<span class="count">2</span> 条未读信息，请注意查看</strong>
+                </div>
+                <div class="list-group list-group-alt">
+                  <a href="#" class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="images/a0.png" alt="..." class="img-circle">
+                    </span>
+                    <span class="media-body block m-b-none">
+                      端坐瘦马<br>
+                      <small class="text-muted">你有什么推荐的音乐吗？</small>
+                    </span>
+                  </a>
+                  <a href="#" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      易听小秘书贴心为你服务<br>
+                      <small class="text-muted">你的会员即将到期，请注意冲值</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a>
+                </div>
+              </section>
+            </section>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="images/a0.png" alt="...">
+              </span>
+              没事就爱瞎晃悠 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">设置</a>
+              </li>
+              <li>
+                <a href="profile.html">个人中心</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">3</span>通知</a></li>
+              <li>
+                <a href="docs.html">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="modal.lockme.html" data-toggle="ajaxModal" >注销</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk nav-xs aside hidden-print" id="nav">          
+          <section class="vbox">
+            <section class="w-f-md scrollable">
+              <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+
+
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav bg clearfix">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                                       发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-bold">首页</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="genres.html">
+                        <i class="icon-music-tone-alt icon text-info"></i>
+                        <span class="font-bold">类型</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="events.html">
+                        <i class="icon-drawer icon text-primary-lter"></i>
+                        <b class="badge bg-primary pull-right">6</b>
+                        <span class="font-bold">主播电台</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="listen.html">
+                        <i class="icon-list icon  text-info-dker"></i>
+                        <span class="font-bold">歌单</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">视频</span>
+                      </a>
+                    </li>
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                                  接口
+                    </li>
+                    <li >
+                      <a href="#" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-screen-desktop icon">
+                        </i>
+                        <span>类型</span>
+                      </a>
+                      <ul class="nav dk text-sm">
+                        <li >
+                          <a href="layout-color.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>移动端</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="layout-boxed.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>盒装布局</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="layout-fluid.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>流体布局</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li >
+                      <a href="#" >
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-chemistry icon">
+                        </i>
+                        <span>聊天和定时</span>
+												</a>
+												<ul class="nav dk text-sm">
+
+					<li>
+                          <a href="widgets.html" class="auto">                            
+                            <b class="badge bg-dark pull-right">8</b>                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>聊天</span>
+                          </a>
+                        </li>
+                        
+                        <li >
+                          <a href="timeline.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>定时</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li >
+                      <a href="#" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-grid icon">
+                        </i>
+                        <span>个人中心</span>
+                      </a>
+                      <ul class="nav dk text-sm">
+                        <li >
+                          <a href="profile.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>简况</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="blog.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>博客</span>
+                          </a>
+                        </li>
+                       
+                        <li >
+                          <a href="signin.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>登录</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="signup.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>注册</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="404.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>刷新页面</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="nav text-sm">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                      播放列表
+                    </li>
+                    <li>
+                      <a href="track-detail.html">
+                        <i class="icon-music-tone icon"></i>
+                        <b class="badge bg-success dker pull-right">90</b>
+                        <span>嘻哈</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+<footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="images/a3.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">没事就爱瞎晃悠</strong> 
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">艺术总监</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">设置</a>
+                      </li>
+                      <li>
+                        <a href="profile.html">个人中心</a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="badge bg-danger pull-right">3</span>
+                          通知
+                        </a>
+                      </li>
+                      <li>
+                        <a href="docs.html">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="modal.lockme.html" data-toggle="ajaxModal" >注销</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="vbox">
+          <section class="scrollable">
+            <div id="masonry" class="pos-rlt animated fadeInUpBig">
+              <div class="item">
+                <div class="carousel slide auto" data-interval="3000">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="item-overlay opacity animated fadeInDown wrapper bg-info">
+                        <p class="text-white">N.01</p>
+                        <div class="center text-center m-t-n">
+                          <a href="#"><i class="icon-control-play i-2x"></i></a>
+                        </div>
+                      </div>
+                      <div class="bottom wrapper bg-info gd">
+                        <div class="m-t m-b"><a href="#" class="b-b b-danger h2 text-u-c text-lt font-bold">虞山以往</a></div>
+                        <p class="hidden-xs">树树皆秋色，山山唯落晖</p>
+                      </div>
+                      <a href="#"><img src="images/m20.jpg" alt="" class="img-full"></a>
+                    </div>
+                    <div class="item">
+                      <div class="item-overlay opacity animated fadeInDown wrapper bg-info">
+                        <p class="text-white">N.02</p>
+                        <div class="center text-center m-t-n">
+                          <a href="#"><i class="icon-control-play i-2x"></i></a>
+                        </div>
+                      </div>
+                      <div class="bottom wrapper bg-info gd">
+                        <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">梅子青时</a></div>
+                        <p class="hidden-xs">没事就爱瞎晃悠的电台</p>
+                      </div>
+                      <a href="#"><img src="images/m22.jpg" alt="" class="img-full"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-overlay gd animated fadeInUp wrapper bg-info">
+                  <p class="text-white">强烈推荐</p>
+                  <div class="center text-center m-t-n">
+                    <a href="#"><i class="icon-control-play i-2x"></i></a>
+                  </div>
+                </div>
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">程一电台</a></div>
+                  <p class="hidden-xs">你走后，我又一个人爱了很久</p>
+                </div>
+                <a href="#"><img src="images/m31.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">冯提莫电台</a></div>
+                  <p class="hidden-xs"> 欢迎来douyu.com搜索 冯提莫 看我直播~</p>
+                </div>
+                <a href="#"><img src="images/m10.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="item-overlay active bg-primary dker wrapper text-center">
+                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">一个人的电台故事</a></div>
+                  <p class="hidden-xs">你是不是还放不下她？</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">轩子巨2兔【ASMR】</a></div>
+                  <p class="hidden-xs">【小拳锤你胸口场景】~3D同人声音</p>
+                </div>
+                <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="carousel carousel-fade bg-info slide auto" data-interval="6000">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="item-overlay active dker wrapper text-center">
+                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Hi,你还在听吗？</div>
+                        <p class="hidden-xs">我在大街上闻见你身上的味道 </p>
+                      </div>
+                      <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                    </div>
+                    <div class="item">
+                      <div class="item-overlay active dk wrapper text-center">
+                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">声音蔓延</a></div>
+                        <p class="hidden-xs">属于你的微奢生活提案，让每一天都值得纪念</p>
+                      </div>
+                      <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《红楼梦》白话版</a></div>
+                  <p class="hidden-xs">四大名著之首，人们称 《红楼梦》内蕴着一个时代的历史容量，是封建末世的百科全书</p>
+                </div>
+                <a href="#"><img src="images/m13.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">滚滚电台</a></div>
+                  <p class="hidden-xs">给我一个角落，让声音蔓延。</p>
+                </div>
+                <a href="#"><img src="images/m30.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">海陪岸听</a></div>
+                  <p class="hidden-xs">愿我永远不红，只给你一个人讲晚安故事。</p>
+                </div>
+                <a href="#"><img src="images/m19.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="item-overlay active bg-success dker wrapper text-center">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">十点读书</a></div>
+                  <p class="hidden-xs">读好书，美文，故事，诗歌。微博，微信号：十点读书。</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">饮鸩不止渴</a></div>
+                  <p class="hidden-xs">昨天走开，看见微笑到来。饮鸩不止渴，农药陪你到最后。</p>
+                </div>
+                <a href="#"><img src="images/m7.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">不说晚安,说了你也不睡</a></div>
+                  <p class="hidden-xs">其实我也是个失眠的人,想想反正睡不着,那就哄你们睡觉吧~</p>
+                </div>
+                <a href="#"><img src="images/m18.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-primary h4 text-u-c text-lt font-bold">Eleifend</a></div>
+                  <p class="hidden-xs">Malesuada augue. Donec eleifend condimentum</p>
+                </div>
+                <a href="#"><img src="images/m32.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">见字如面 </a></div>
+                  <p class="hidden-xs">用书信打开历史节点，带领观众走进那些依然鲜活的时代场景、人生故事，去触碰那些依然可感的人物情状和社会风物，重新领会中国人的精神情怀与生活智慧。</p>
+                </div>
+                <a href="#"><img src="images/m40.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">名家散文 </a></div>
+                  <p class="hidden-xs">微博：365读书v。做一档有灵魂的读书节目 </p>
+                </div>
+                <a href="#"><img src="images/m21.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">晓苏电台</a></div>
+                  <p class="hidden-xs"> 晚安，是换个世界想你。</p>
+                </div>
+                <a href="#"><img src="images/m5.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">午夜幻想曲</a></div>
+                  <p class="hidden-xs">自娱自乐的古典音乐节目</p>
+                </div>
+                <a href="#"><img src="images/a10.png" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">安静电台【不可思议遇见你】</a></div>
+                  <p class="hidden-xs">一篇文字，一个故事，温暖的声音陪伴你！欢迎订阅，节目更新早知道。 </p>
+                </div>
+                <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="item-overlay active bg-warning dker wrapper text-center">
+                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">小船说</a></div>
+                  <p class="hidden-xs">一分钟，你能笑一年</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">原谅我眼里满是人间烟火</a></div>
+                  <p class="hidden-xs">给你的耳朵讲故事。
+愿带给你这世间所有温暖。
+把孤独熬成一碗酒....</p>
+                </div>
+                <a href="#"><img src="images/m6.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="item-overlay active bg-info lt wrapper text-center">
+                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">艳秋电台</a></div>
+                  <p class="hidden-xs">用文字雕刻时光，分享阅读的快乐</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">米莉.听见花开</a></div>
+                  <p class="hidden-xs">米莉的听见花开，陪你听听别人的故事，想想自己的心事。虽在不同的城市，却守候着同一种心情。</p>
+                </div>
+                <a href="#"><img src="images/m42.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">听说-你的心情有人懂</a></div>
+                  <p class="hidden-xs">你恰好在听，我正好在说，用声音治愈你</p>
+                </div>
+                <a href="#"><img src="images/m9.jpg" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">摩崖时刻出品</a></div>
+                  <p class="hidden-xs">主播：行者无疆；行云
+欢迎关注摩崖时刻电台，感谢订阅</p>
+                </div>
+                <a href="#"><img src="images/a7.png" alt="" class="img-full"></a>
+              </div>
+              <div class="item">
+                <div class="bottom gd bg-info wrapper">
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">至味在人间</a></div>
+                  <p class="hidden-xs">一个美食爱好者的十年饮啜笔记，陈晓卿将文字化作原料，以散文为碗钵，佐以故事人情之盐，把关于食物的独家记忆蒸炒煎炸而成此书。</p>
+                </div>
+                <a href="#"><img src="images/m12.jpg" alt="" class="img-full"></a>
+              </div>
+            </div>
+          </section>
+        </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>  
+  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/masonry/tiles.min.js"></script>
+  <script src="js/masonry/demo.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>创建一个虚拟的DOM元素</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+<!--在一个真实的DOM上定义容器-->
+<div id="content"></div>
+<script>
+    /*在虚拟的DOM上创建P元素*/
+    var el = React.createElement('p',null,'hello react!');
+    /*将虚拟DOM上的P元素渲染到真实DOM上的#content容器上*/
+    ReactDOM.render(el,document.querySelector('#content'));
+</script>
+</body>
+</html>

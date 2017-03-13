@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>网易云音乐</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />  
+  
+  <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info dk">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="icon-earphones"></i>
+          <img src="images/logo.png" alt="." class="hide">
+          <span class="hidden-nav-xs m-l-sm">网易云音乐</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+						<i class="icon-settings"></i>
+					</a>
+				</div>
+				<ul class="nav navbar-nav hidden-xs">
+					<li>
+						<a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+							<i class="fa fa-indent text"></i>
+							<i class="fa fa-dedent text-active"></i>
+						</a>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-btn">
+              <button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+            </span>
+							<input type="text" class="form-control input-sm no-border rounded" placeholder="搜索音乐、歌曲 . . .">
+						</div>
+					</div>
+				</form>
+				<div class="navbar-right ">
+					<ul class="nav navbar-nav m-n hidden-xs nav-user user">
+						<li class="hidden-xs">
+							<a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+								<i class="icon-bell"></i>
+								<span class="badge badge-sm up bg-danger count">2</span>
+							</a>
+							<section class="dropdown-menu aside-xl animated fadeInUp">
+								<section class="panel bg-white">
+									<div class="panel-heading b-light bg-light">
+										<strong>有<span class="count">2</span> 条未读信息，请注意查看</strong>
+									</div>
+									<div class="list-group list-group-alt">
+										<a href="#" class="media list-group-item">
+											<span class="pull-left thumb-sm">
+                      <img src="images/a0.png" alt="..." class="img-circle">
+                    </span>
+											<span class="media-body block m-b-none">
+                      端坐瘦马<br>
+                      <small class="text-muted">你有什么推荐的音乐吗？</small>
+                    </span>
+										</a>
+										<a href="#" class="media list-group-item">
+											<span class="media-body block m-b-none">
+                      易听小秘书贴心为你服务<br>
+                      <small class="text-muted">你的会员即将到期，请注意冲值</small>
+                    </span>
+										</a>
+									</div>
+									<div class="panel-footer text-sm">
+										<a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
+										<a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a>
+									</div>
+								</section>
+							</section>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+								<span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="images/a0.png" alt="...">
+              </span> 没事就爱瞎晃悠 <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu animated fadeInRight">
+								<li>
+									<span class="arrow top"></span>
+									<a href="#">设置</a>
+								</li>
+								<li>
+									<a href="profile.html">个人中心</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="badge bg-danger pull-right">3</span>通知</a>
+								</li>
+								<li>
+									<a href="docs.html">帮助</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="modal.lockme.html" data-toggle="ajaxModal">注销</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<section>
+				<section class="hbox stretch">
+					<!-- .aside -->
+					<aside class="bg-black dk aside hidden-print" id="nav">
+						<section class="vbox">
+							<section class="w-f-md scrollable">
+								<div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+									<!-- nav -->
+									<nav class="nav-primary hidden-xs">
+										<ul class="nav bg clearfix">
+											<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+												发现
+											</li>
+											<li>
+												<a href="index.html">
+													<i class="icon-disc icon text-success"></i>
+													<span class="font-bold">首页</span>
+												</a>
+											</li>
+											<li>
+												<a href="genres.html">
+													<i class="icon-music-tone-alt icon text-info"></i>
+													<span class="font-bold">类型</span>
+												</a>
+											</li>
+											<li>
+												<a href="events.html">
+													<i class="icon-drawer icon text-primary-lter"></i>
+													<b class="badge bg-primary pull-right">6</b>
+													<span class="font-bold">MV</span>
+												</a>
+											</li>
+											<li>
+												<a href="listen.html">
+													<i class="icon-list icon  text-info-dker"></i>
+													<span class="font-bold">歌单</span>
+												</a>
+											</li>
+											<li>
+												<a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
+													<i class="icon-social-youtube icon  text-primary"></i>
+													<span class="font-bold">视频</span>
+												</a>
+											</li>
+											<li class="m-b hidden-nav-xs"></li>
+										</ul>
+										<ul class="nav" data-ride="collapse">
+											<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+												列表
+											</li>
+											<li>
+												<a href="#" class="auto">
+													<span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+													<i class="icon-screen-desktop icon">
+                        </i>
+													<span>类型</span>
+												</a>
+												<ul class="nav dk text-sm">
+													<li>
+														<a href="layout-color.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>移动端</span>
+														</a>
+													</li>
+													<li>
+														<a href="layout-boxed.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>盒装布局</span>
+														</a>
+													</li>
+													<li>
+														<a href="layout-fluid.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>流水布局</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#" class="auto">
+													<span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+													<i class="icon-chemistry icon">
+                        </i>
+												<span>聊天和定时</span>
+												</a>
+												<ul class="nav dk text-sm">
+
+					<li>
+                          <a href="widgets.html" >                            
+                            <b class="badge bg-dark pull-right">8</b>                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>聊天</span>
+                          </a>
+                        </li>
+                        
+                        <li >
+                          <a href="timeline.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>定时</span>
+                          </a>
+                        </li>
+												</ul>
+											</li>
+											<li class="active">
+												<a href="#" class="auto">
+													<span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+													<i class="icon-grid icon">
+                        </i>
+													<span>登录注册</span>
+												</a>
+												<ul class="nav dk text-sm">
+												  <li >
+                          <a href="profile.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>简况</span>
+                          </a>
+                        </li>
+													 <li  class="active">
+                          <a href="blog.html" class="auto">                                                        
+                            <i class="fa fa-angle-right text-xs"></i>
+
+                            <span>博客</span>
+                          </a>
+                       </li>
+													<li>
+														<a href="signin.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>登录</span>
+														</a>
+													</li>
+													<li>
+														<a href="signup.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>注册</span>
+														</a>
+													</li>
+													<li>
+														<a href="404.html" class="auto">
+															<i class="fa fa-angle-right text-xs"></i>
+
+															<span>刷新页面</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="nav text-sm">
+											<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+												<span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span> 播放列表
+											</li>
+											<li>
+												<a href="#">
+													<i class="icon-music-tone icon"></i>
+													<span>嘻哈</span>
+												</a>
+											</li>
+											<li>
+												<a href="jueshi.html">
+													<i class="icon-playlist icon text-success-lter"></i>
+													<b class="badge bg-success dker pull-right">9</b>
+													<span>爵士</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+									<!-- / nav -->
+								</div>
+							</section>
+
+							<footer class="footer hidden-xs no-padder text-center-nav-xs">
+								<div class="bg hidden-xs ">
+									<div class="dropdown dropup wrapper-sm clearfix">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="images/a3.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+											<span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">没事就爱瞎晃悠</strong> 
+                          <b class="caret"></b>
+                        </span>
+											<span class="text-muted text-xs block m-l">艺术总监</span>
+											</span>
+										</a>
+										<ul class="dropdown-menu animated fadeInRight aside text-left">
+											<li>
+												<span class="arrow bottom hidden-nav-xs"></span>
+												<a href="#">设置</a>
+											</li>
+											<li>
+												<a href="profile.html">个人中心</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="badge bg-danger pull-right">3</span> 通知
+												</a>
+											</li>
+											<li>
+												<a href="docs.html">帮助</a>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="modal.lockme.html" data-toggle="ajaxModal">注销</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</footer>
+						</section>
+					</aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="vbox">
+            <section class="scrollable wrapper-lg">
+              <div class="row">
+                <div class="col-sm-9">
+                  <div class="blog-post">                   
+                    <div class="post-item">
+                      <div class="post-media">
+                        <img src="images/m42.jpg" class="img-full">
+                      </div>
+                      <div class="caption wrapper-lg">
+                        <h2 class="post-title"><a href="#">专辑介绍：</a></h2>
+                        <div class="post-sum">
+                          <p>见素抱朴 不忘初心 
+                          <br><br>
+                          听完《无法长大》这张专辑，总会思考一个问题：成长的意义是什么呢？是不再带着棱角和刺直面世界？是对所有不公平和潜规则妥协？还是一路走一路寻找最初的感动？这些零碎的定义，看起来都不足以阐述成长。而赵这张专辑，似乎也在寻找着答案……</p>
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> 民谣歌手： <a href="#" class="m-r-sm">赵雷</a>
+                          <i class="fa fa-clock-o icon-muted"></i> 2016年12月21日
+                          <a href="#" class="m-l-sm"><i class="fa fa-comment-o icon-muted"></i> 999+ 评论</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-item">
+                      <div class="caption wrapper-lg">
+                        <h2 class="post-title"><a href="#">[超级面对面] 赵雷：面对世界我还是一个初学者</a></h2>
+                        <div class="post-sum">
+                          <p>网易音乐独家报道 赵雷凭借《成都》在《歌手》引发强烈共鸣。勾起观众对诗和远方美好而温暖的回忆和憧憬。北京到拉萨，在年少游历四方路途中的故事，给了三十而立的他怎样的滋养和灵感？说着自己无法长大，他却为何有了独当一面的成熟？</p>
+                          <h3>网易云音乐：《无法长大》这首歌的创作背景是怎样的？</h3>
+                          <p>
+                          赵雷：其实它更像是我现在这个年纪，它就映射着我现在的生活，和童年关系不大，映射着我现在的想法，因为我现在还单身，但我写这首歌的时候其实是有女朋友的，这首歌是在一年多以前写的。就是一个……觉得现实生活挺累的，我们睡在租的房子里，每天都想有一天能够离开这个地方，出去，对。但是我们又都不是那种放下眼前的事儿就走了那种人，生活给我们的压力也大，我们自己也心重，所以就活得很累。</p>
+                        </div>
+                        <div class="line line-lg"></div>
+                        <div class="text-muted">
+                          <i class="fa fa-user icon-muted"></i> 网易云音乐 ：<a href="#" class="m-r-sm">超级面对面</a>
+                          <i class="fa fa-clock-o icon-muted"></i> 2016年12月23日
+                          <a href="#" class="m-l-sm"><i class="fa fa-comment-o icon-muted"></i> 999+ 评论</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center m-t-lg m-b-lg">
+                    <ul class="pagination pagination-md">
+                      <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                  </div>
+                  <h4 class="m-t-lg m-b">听友评论<small>( 已有999+评论 )</small></h4>
+                  <section class="comment-list block">
+                    <article id="comment-id-1" class="comment-item">
+                      <a class="pull-left thumb-sm">
+                        <img src="images/a0.png" class="img-circle">
+                      </a>
+                      <section class="comment-body m-b">
+                        <header>
+                          <a href="#"><strong>没事就爱瞎晃悠</strong></a>
+                          <label class="label bg-info m-l-xs">音乐人</label> 
+                          
+                          <span class="text-muted text-xs block m-t-xs">
+                            24分钟前
+                          </span>
+                          <a class="btn btn-default" data-toggle="button">
+															<span class="text">
+		                    <i class="fa fa-thumbs-up text-success"></i> 999+
+		                  </span>
+															<span class="text-active">
+		                    <i class="fa fa-thumbs-down text-danger"></i> 500+
+		                  </span>
+														</a>
+                        </header>
+                        <div class="m-t-sm">喜欢在街头，在酒吧，在草地上，在青岛大海的对面唱着这首熟悉的歌谣，个中滋味自己体会，即将踏上一段美妙的搭车民谣旅行，期待与成都的相遇，在成都的街头哼唱着这首歌，把手揣进裤兜，坐在小酒馆的门口，就这样一个个静静的走着，消失在灯光的尽头，就这样，走着，走完 自己选择的人生！</div>
+                      </section>
+                    </article>
+                    <!-- .comment-reply -->
+                    <article id="comment-id-2" class="comment-item comment-reply">
+                      <a class="pull-left thumb-sm">
+                        <img src="images/a1.png" class="img-circle">
+                      </a>
+                      <section class="comment-body m-b">
+                        <header>
+                          <a href="#"><strong>陈赛</strong></a>
+                          <label class="label bg-dark m-l-xs">作曲家</label> 
+                          <span class="text-muted text-xs block m-t-xs">
+                            2分钟前
+                          </span>
+                        </header>
+                        <div class="m-t-sm">因为一首歌怀念一座城。曾经的天府广场武侯祠锦里杜甫草堂青羊宫春熙路宽窄巷子昭觉寺文殊院都成了回忆</div>
+                      </section>
+                    </article>
+                    <!-- / .comment-reply -->
+                    <article id="comment-id-2" class="comment-item">
+                      <a class="pull-left thumb-sm">
+                        <img src="images/a2.png" class="img-circle">
+                      </a>
+                      <section class="comment-body m-b">
+                        <header>
+                          <a href="#"><strong>王超</strong></a>
+                          <label class="label bg-dark m-l-xs">摇滚歌手</label> 
+                          <span class="text-muted text-xs block m-t-xs">
+                            21分钟前
+                          </span>
+                           <a class="btn btn-default" data-toggle="button">
+															<span class="text">
+		                    <i class="fa fa-thumbs-up text-success"></i> 100+
+		                  </span>
+															<span class="text-active">
+		                    <i class="fa fa-thumbs-down text-danger"></i> 50+
+		                  </span>
+														</a>
+                        </header>
+                        <blockquote class="m-t">
+                          <p>赵雷是“民谣革命的镜子”，是具有“最清醒的现实主义”的“天才艺术家”。</p>
+                          <small>著名摇滚人 <cite title="Source Title">王超</cite></small>
+                        </blockquote>
+                        <div class="m-t-sm">赵雷的歌朴实无华，都是对生活的体会和领悟。都是自己真实的经历，所以给人的感觉真实。能引起共鸣，第一次听成都，就深深爱上了这种温婉的旋律，没有华丽的词藻，只有淡淡的心酸和无奈。不在成都，却置身成都。</div>
+                      </section>
+                    </article>
+                  </section>
+                  <h4 class="m-t-lg m-b">留下你的足迹</h4>
+                  <form>
+                    <div class="form-group pull-in clearfix">
+                      <div class="col-sm-6">
+                        <label>你的名字</label>
+                        <input type="text" class="form-control" placeholder="姓名">
+                      </div>
+                      <div class="col-sm-6">
+                        <label >电子邮箱</label>
+                        <input type="email" class="form-control" placeholder="请输入有效的电子邮箱">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>评论</label>
+                      <textarea class="form-control" rows="5" placeholder="请输入你的评论"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success">提交评论</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-3">
+                  <h5 class="font-bold">类别</h5>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">15</span>
+                        专辑
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">30</span>
+                        mv
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">9999+</span>
+                        粉丝
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#">
+                        <span class="badge pull-right">301</span>
+                        好友
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tags m-b-lg l-h-2x">
+                    <a href="#" class="label bg-primary">音乐人</a> <a href="#" class="label bg-primary">作曲人</a> <a href="#" class="label bg-primary">民谣爱好者</a> <a href="#" class="label bg-primary">单身</a> <a href="#" class="label bg-primary">美食</a> <a href="#" class="label bg-primary">怀旧</a>
+                  </div>
+                  <h5 class="font-bold">最新专辑：</h5>
+                  <div>
+                    <article class="media">
+                      <a class="pull-left thumb thumb-wrapper m-t-xs">
+                        <img src="images/m1.jpg">
+                      </a>
+                      <div class="media-body">                        
+                        <a href="#" class="font-semibold">成都</a>
+                        <div class="text-xs block m-t-xs"><a href="#">专辑</a> 《成都》</div>
+                      </div>
+                    </article>
+                    <div class="line"></div>
+                    <article class="media m-t-none">
+                      <a class="pull-left thumb thumb-wrapper m-t-xs">
+                        <img src="images/m2.jpg">
+                      </a>
+                      <div class="media-body">                        
+                        <a href="#" class="font-semibold">无法长大</a>
+                        <div class="text-xs block m-t-xs"><a href="#">专辑</a> 《无法长大》</div>
+                      </div>
+                    </article>
+                    <div class="line"></div>
+                    <article class="media m-t-none">
+                      <a class="pull-left thumb thumb-wrapper m-t-xs">
+                        <img src="images/m3.jpg">
+                      </a>
+                      <div class="media-body">                        
+                        <a href="#" class="font-semibold">少年锦时</a>
+                        <div class="text-xs block m-t-xs"><a href="#">专辑</a> 《吉姆餐厅》</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>  
+  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+  
+  <script src="js/app.plugin.js"></script>
+  <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+
+</body>
+</html>

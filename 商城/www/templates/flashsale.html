@@ -1,0 +1,50 @@
+<div id="flashsale" class="index">
+    <div class="header  text-center">
+        <a ui-sref='^.home'><img src="img/category/l_arrow.jpg" alt="l_arrow"></a>秒杀区
+        <a href="" class="like"><img src="img/category/coll.png" /></a>
+    </div>
+    <ion-content>
+        <!--slide开始-->
+        <div class="slide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/category/slider1.jpg" alt="s1" /></div>
+                    <div class="swiper-slide"><img src="img/category/slider2.jpg" alt="s2" /></div>
+                    <div class="swiper-slide"><img src="img/category/slider3.jpg" alt="s3" /></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!--slide结束-->
+        <div class="flash-main">
+            <section ng-repeat="flash in flashArr">
+                <div class="col-xs-4">
+                    <a href="" class="flash-img"><img ng-src="{{flash.picSrc}}" class="img-responsive" alt="flashImg" /></a>
+                </div>
+                <div class="col-xs-8">
+                    <h3 class="text-left"><a href="">{{flash.name}}</a></h3>
+
+                    <p class="price text-left ">
+                        {{flash.fprice | currency:'￥'}}
+                        <small><s>{{flash.price}}</s></small>
+                        <a href=""><img src="img/flash2.png" class="img-responsive img-rounded" alt="" /></a>
+                    </p>
+                    <div class="count-down text-left">
+                        倒计时:
+                        <span><b>0</b></span>
+                        <span><b>5</b></span> :
+                        <span><b>3</b></span>
+                        <span><b>2</b></span> :
+                        <span><b>1</b></span>
+                        <span><b>2</b></span>
+                        <span class="overplus text-right">剩余<b>{{flash.rest}}</b>件</span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+           
+        </div>
+
+    </ion-content>
+</div>

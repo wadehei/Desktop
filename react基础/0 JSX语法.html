@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+</html>
+<script type="text/jsx">
+    var names = ['lzy','tcc','scs'];
+    ReactDOM.render(
+            <div>
+            {
+                    names.map(function(name){
+                        return <div>hello {name}</div>
+                    })
+                    }
+            </div>,
+            document.getElementById('content')
+    )
+    /*遇到HTML标签，以<>就用HTML规则解析，遇到{}代码块，就以JS解析*/
+
+</script>
